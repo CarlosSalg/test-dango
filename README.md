@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Test realizado en **ReactJS**
 
-## Available Scripts
+**Objetivo**:
+1. Agregar un campo de entrada que se pueda usar para editar los títulos de los productos (los títulos deben cambiar
+mientras se escribe).
+1. Agregar un selector de rango para editar el tamaño de fuente de los títulos de los productos.
+1. Fuera de la sección, se muestra la suma total de las cantidades de productos que provienen de la
+entradas de cada producto.
 
-In the project directory, you can run:
 
-### `npm start`
+1. **Componentes**
+		Navbar: muestra el número total de productos que se seleccionan para agregar al carrito.
+		Product:
+			Product.js: Lógica para agregar productos al carrito, controlar tamaño de fuente con input tipo range y controlar texto del título.
+			ProductHeader.js: componente con imágen del producto y títutlo.
+			ProductBody.js: componente con precio, input para seleccionar cantidad de productos y parrafo con descripción del producto.
+			ProductFooter.js: componente con botón para agregar productos al carrito.
+1. **Hooks**:
+		UseState: para controlar los estados de componentes.
+		UseEffect: para controlar el renderizado de funciones sobre el componente.
+		UseForm: Custom Hook para controlar el contenido de los inputs tipo "text".
+1. **React Redux** para manejar el estado del contador global de productos agregados al carrito y estado del loader de productos (se realizo un pequeño ejercicio como si estuviera cargando los productos desde una API).
+1. **PropTypes ** en los componentes para verificar que reciben los tipos de datos correctos para cada uno.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+------------
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Estilos
+Uso de Grid Layout, Flexbox para maquetado responsive.
+CSS sin uso de algún tipo de libreria o framework.
 
-### `npm test`
+[![Desktop](https://res.cloudinary.com/dttvufb2d/image/upload/v1656981624/Portfolio/Test%20Dango/Capture_t7dey2.png "Desktop")](https://res.cloudinary.com/dttvufb2d/image/upload/v1656981624/Portfolio/Test%20Dango/Capture_t7dey2.png "Desktop")
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[========]
 
-### `npm run build`
+[![Mobile](https://res.cloudinary.com/dttvufb2d/image/upload/v1656981659/Portfolio/Test%20Dango/capture_mobile_tthtix.png "Mobile")](https://res.cloudinary.com/dttvufb2d/image/upload/v1656981659/Portfolio/Test%20Dango/capture_mobile_tthtix.png "Mobile")
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[========]
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Aplicación:
+**git clone https://github.com/CarlosSalg/test-dango.git**
+Ejecuta para clonar repositorio.
 
-### `npm run eject`
+**npm install**
+Instala la dependencias del proyecto.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**npm start**
+Ejecuta el proyecto en tu navegador.
