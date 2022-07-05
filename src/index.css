@@ -1,13 +1,187 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@100;300;700&display=swap');
+:root {
+    --white: #fff;
+    --primary-color: #EAD7E5;
+    --primary-color-hover: #f5ebf2;
+    --border-color: #181717;
+}
+/*GENERAL*/
+*{
+    font-family: 'Gantari', sans-serif;
+}
+/*INPUTS*/
+.input__text{
+    height: 2rem;
+    width: 95%;
+    text-align: center;
+}
+.input__range{
+    margin-top: 1rem;
+    width: 100%;
+    display: block;
+}
+.input__range {
+    display: block;
+    width: 100%;
+}
+.input__range:focus {
+    outline: none;
+}
+.input__range,
+.input__range::-webkit-slider-runnable-track,
+.input__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 3px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.input__range::-webkit-slider-thumb {
+    background-color: var(--primary-color);
+    width: 12px;
+    height: 12px;
+    border: 3px solid var(--primary-hover);
+    border-radius: 50%;
+    margin-top: -5px;
+}
+.input__range::-webkit-slider-runnable-track {
+    background-color: var(--primary-color);
+    height: 1px;
+}
+.input__range:focus::-webkit-slider-runnable-track {
+    outline: none;
+}
+/* BUTTONS */
+.button{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    display: inline-block;
+    padding: 0.75rem;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+}
+.button__primary{
+    background-color: var(--primary-color); 
+    border: 1px solid var(--border-color);
+}
+.button__primary:hover{
+    background-color: var(--primary-color-hover); 
+    transition: 0.2s;
+}
+.button__secondary{
+    background-color: var(--white); 
+    border: none;
+    text-decoration: underline;
+}
+.button__secondary:hover{
+    background-color: var(--whiter); 
+    transition: 0.2s;
+}
+.button__block{
+    width: 100%;
+}
+/*NAVBAR*/
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background-color: white;
+    z-index: 1;
+}
+.navbar .navbar__logo img{
+    height: 2rem;
+    margin-top: .5rem;
+}
+.navbar .navbar__info{
+    background-color: var(--primary-color-hover);
+    padding: .5rem;
+    border-radius: 3px;
+    font-weight: 700;
+}
+/* SECTIONS */
+.main__wrapper{
+    position: relative;
+}
+.content__wrapper{
+    margin-top: 3.5rem;
+    padding: 0 1rem;
+}
+.main__wrapper .title{
+    padding: 3rem 0;
+    text-align: center;
+}
+.products__container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* PRODUCT */
+.product__card{
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    margin-right: .75rem;
+    margin-left: .75rem;
+    padding: 2rem;
+}
+.product__card .producto__input-control{
+    margin-bottom: 1.5rem;
+}
+.product__card .product__card-header {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.product__card .product__card-header .product__image{
+    border-radius: 22px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.product__card .product__card-body .product__control{
+    display: flex;
+    align-items: center;
+}
+.product__card .product__card-body .product__control input{
+    margin-left: 1rem;
+    height: 2rem;
+    width: 80%;
+    text-align: center;
+}   
+.product__card .product__card-footer{
+    margin-top: 2rem;
+    display: block;
+}
+.product__card .product__card-footer button{
+    font-weight: 700;
+    font-size: 1rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* MEDIA QUERIES */
+@media (max-width: 1100px) {
+    .products__container{
+        grid-template-columns: 33% 33% 33%;
+        max-width: 900px;
+    }
+}
+@media (max-width: 900px) {
+    .products__container{
+        grid-template-columns: 50% 50%;
+        max-width: 600px;
+    }
+}
+@media (max-width: 600px) {
+    .products__container{
+        grid-template-columns: 100%;
+        max-width: 400px;
+    }
 }
