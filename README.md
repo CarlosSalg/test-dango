@@ -26,7 +26,7 @@ entradas de cada producto.
 #### React Redux
 Manejar el estado del contador global de productos agregados al carrito y estado del loader de productos (se realizo un pequeño ejercicio como si estuviera cargando los productos desde una API).
 
-#### PropTypesPropTypes 
+#### PropTypes
 
 Uso en los componentes para verificar que reciben los tipos de datos correctos para cada uno.
 
